@@ -44,14 +44,11 @@ function getAverageArea(countries) {
     var total = 0;
     for(var i = 0; i < countries.length; i++){
         averageArea.push(countries[i].area);
-
-        for (var j = 0; j < averageArea.length; j++){
-            total = (total + averageArea[i]) / averageArea.length;
-        }
     }
     console.log(averageArea);
-    console.log(total.toFixed(1));
-    return total.toFixed(1);
+    console.log((averageArea.reduce((sum, a) => sum + a, 0) / averageArea.length).toFixed(1));
+    
+    return (averageArea.reduce((sum, a) => sum + a, 0) / averageArea.length).toFixed(1);
 }
 var average = getAverageArea(countries)
 //пример: в average -> 601162.3
