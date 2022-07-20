@@ -41,7 +41,7 @@ function getAverageArea(countries) {
         результат с точностью до 1 знака после запятой
     */
     var averageArea = [];
-    var total = 0;
+
     for(var i = 0; i < countries.length; i++){
         averageArea.push(countries[i].area);
     }
